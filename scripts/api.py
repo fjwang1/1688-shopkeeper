@@ -221,7 +221,7 @@ def publish_items(item_ids: List[str], shop_code: str) -> PublishResult:
     channel = channel_map.get(target_shop.channel, "douyin")
     
     body = json.dumps({
-        "itemList": ",".join(item_ids[:50]),  # 限制50个
+        "offerIdList": ",".join(item_ids[:50]),  # 限制50个
         "channel": channel,
         "shopCode": shop_code
     })
