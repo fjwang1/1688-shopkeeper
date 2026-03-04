@@ -1,0 +1,26 @@
+# 开发测试文件（不随 skill 发布）
+scripts/test.py
+
+# Python 缓存
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# 数据目录（用户本地生成）
+data/products/*.json
+
+# 环境变量配置（可能包含敏感信息）
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
