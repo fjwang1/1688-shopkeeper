@@ -77,7 +77,7 @@ def check_shop_status() -> dict:
     }
 
 
-if __name__ == "__main__":
+def main():
     try:
         status = check_shop_status()
         output = {
@@ -99,3 +99,7 @@ if __name__ == "__main__":
             "markdown": f"查询店铺失败（网络异常，已重试3次）：{e}",
         }
     print(json.dumps(output, ensure_ascii=False, indent=2))
+
+
+if __name__ == "__main__":
+    main()

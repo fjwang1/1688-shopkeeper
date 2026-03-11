@@ -127,7 +127,7 @@ def publish_with_check(item_ids: List[str], shop_code: str) -> dict:
     }
 
 
-if __name__ == "__main__":
+def main():
     parser = argparse.ArgumentParser(description="1688 铺货到下游店铺")
     parser.add_argument("--shop-code", required=True, help="目标店铺代码")
     group = parser.add_mutually_exclusive_group(required=True)
@@ -155,3 +155,7 @@ if __name__ == "__main__":
             "markdown": f"铺货失败（网络异常，已重试3次）：{e}",
         }
     print(json.dumps(output, ensure_ascii=False, indent=2))
+
+
+if __name__ == "__main__":
+    main()

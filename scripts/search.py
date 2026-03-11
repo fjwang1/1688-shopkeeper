@@ -154,7 +154,7 @@ def _product_to_dict(p: Product) -> dict:
     return d
 
 
-if __name__ == "__main__":
+def main():
     parser = argparse.ArgumentParser(description="1688 商品搜索")
     parser.add_argument("--query", "-q", required=True, help="搜索关键词（自然语言描述）")
     parser.add_argument("--channel", "-c", default="douyin",
@@ -178,3 +178,7 @@ if __name__ == "__main__":
             "markdown": f"搜索失败（网络异常，已重试3次）：{e}",
         }
     print(json.dumps(output, ensure_ascii=False, indent=2))
+
+
+if __name__ == "__main__":
+    main()
